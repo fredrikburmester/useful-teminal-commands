@@ -2,6 +2,7 @@
 
 ## Mac
 ### Python
+#### Virtual enviroments
 - Create a virtual enviroment: `virtualenv <PATH>`
 - Start virtual enviroment: `source bin/activate`
 - Deavtivate the virtual enviroment: `deactivate`
