@@ -6,6 +6,14 @@
 - Start virtual enviroment: `source bin/activate`
 - Deavtivate the virtual enviroment: `deactivate`
 
+## Homebrew 
+Install homebrew: https://brew.sh/
+
+### Homebrew Packages
+- `brew install wget`
+- `brew install vlc`
+- `brew install rectangle`
+
 ## UnRaid
 ### Nextcloud Docker
 **Scan all files**
