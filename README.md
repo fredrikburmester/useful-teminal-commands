@@ -53,3 +53,12 @@ rails db:setup
 rails db:migrate
 overmind start -f Procfile.dev
 ```
+
+## GitHub
+### Add SSH Keys
+If you have no SSH keys: 
+```
+cd ~/.ssh && ssh-keygen
+cat id_rsa.pub | pbcopy
+```
+Then paste the SSH Key on the GitHub website.
