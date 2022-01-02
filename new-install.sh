@@ -44,6 +44,7 @@ brew install --cask spotify
 brew install --cask setapp
 brew install --cask visual-studio-code
 brew install --cask alfred
+brew install --cask github
 
 brew install yarn
 brew install node
