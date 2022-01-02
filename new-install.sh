@@ -1,7 +1,9 @@
 #!/bin/sh
 
 echo "Creating an SSH key for you..."
-ssh-keygen -t rsa
+cd ~/.ssh && ssh-keygen
+cat id_rsa.pub | pbcopy
+cd
 
 echo "Please add this public key to Github \n"
 echo "https://github.com/account/ssh \n"
