@@ -1,6 +1,8 @@
 # Useful Teminal Commands
 
 ## Mac
+If error when running sh file 
+`cat new-install.sh | tr -d '\r' > install.sh`
 ### Python
 #### Virtual enviroments
 - Create a virtual enviroment: `virtualenv <PATH>`
