@@ -13,6 +13,10 @@ xcode-select --install
 echo "Installing brew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+echo "Adding brew to path..."
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/fredrikburmester/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Update homebrew recipes
 echo "Updating homebrew..."
 brew update
@@ -114,6 +118,16 @@ defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Do
 
 #"Don't prompt for confirmation before downloading"
 defaults write org.m0k.transmission DownloadAsk -bool false
+
+#"Enable tap to click"
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+
+
+
 
 killall Finder
 
