@@ -125,6 +125,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
+#"Download fonts"
 cd ~/Library/Fonts && { 
     curl -O 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf'
     curl -O 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf'
@@ -132,10 +133,24 @@ cd ~/Library/Fonts && {
     curl -O 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf'
     cd -; }
 
+#"Oh my zsh"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+#"Download iterm theme"
+cd ~/Library/Fonts && {    
+    curl -O 'https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Aurora.itermcolors'
+    cd -; }
+
+#"Plugins"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+chsh -s /bin/zsh
+
+#"P10K"
 brew install romkatv/powerlevel10k/powerlevel10k
 echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
-
-echo "Done!"
 
 killall Finder
 
