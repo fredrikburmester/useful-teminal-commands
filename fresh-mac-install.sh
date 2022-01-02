@@ -139,7 +139,7 @@ cd ~/Library/Fonts && {
 #"Oh my zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-#"Download iterm theme"
+#"Download iterm2 theme"
 cd ~/Library/Fonts && {    
     curl -O 'https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Aurora.itermcolors'
     cd -; }
