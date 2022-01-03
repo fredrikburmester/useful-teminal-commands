@@ -45,6 +45,8 @@ brew install --cask setapp
 brew install --cask visual-studio-code
 brew install --cask alfred
 brew install --cask github
+brew install discord
+brew install pyenv
 
 brew install yarn
 brew install node
@@ -56,6 +58,10 @@ brew install postgresql
 
 echo "Cleaning up brew"
 brew cleanup
+
+alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
+echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 
 #"Disabling OS X Gate Keeper"
 #"(You'll be able to install any app you want from here on, not just Mac App Store apps)"
