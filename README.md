@@ -23,8 +23,10 @@ Install homebrew: https://brew.sh/
 `docker exec nextcloud sudo -u abc php /config/www/nextcloud/occ files:scan --all 1> /dev/null`
 
 ## Set up: Ruby on rails (m1)
+Here's a quick tutorial on how to set up Rails on M1 Mac.
+
+### Install brew packages
 ```
-# Install brew packages
 brew install yarn
 brew install node
 brew install tmux
@@ -32,27 +34,38 @@ brew install rbenv
 brew install ruby-build
 brew install overmind
 brew install postgresql
+```
 
-# Install gems
-gem install pg
-
-# RVM or RBENV
+### Install a ruby manager RVM or RBENV
+```
 rbenv install 3.0.2 # install specific version
 rbenv global 3.0.2 # set global ruby version
 rbenv local 3.0.2 # set global ruby version
 rbenv rehash
-# Add this line to ~/.zshrc for RBENV
+```
+### Install postgres client. 
+If your project requires a local instance of pg then use Postgresapp:
+https://postgresapp.com/
+
+### Add this line to ~/.zshrc for RBENV
+```
 eval "$(rbenv init -)"
 ```
-# Restart terminal/vscode
-never user sudo with gem/bundle
-```
-sudo gem update
-sudo gem install rails
+Remember to restart the terminal after this. 
 
-To fix any issues after this do: sudo chown -R YOURUSER:staff /Users/YOURUSER/.rbenv
+### Install gems
+**Never user sudo with gem/bundle**, and if you did, use the command below to fix any permission issues if you're using rbenv.
 ```
-# Turn off AirPlay Reciever in System settings under Sharing
+chown -R YOURUSER:staff /Users/YOURUSER/.rbenv
+gem install pg
+gem install rails
+gem update
+```
+
+### Turn off AirPlay Reciever in System settings under Sharing
+Sometimes AirPlay reciever uses the same port as rails so turning it off will solve that.
+
+### Install the project
 ``` 
 yarn
 bundle install
