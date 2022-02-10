@@ -5,7 +5,7 @@ If error when running the setup sh file
 `cat new-install.sh | tr -d '\r' > install.sh`
 
 ### Python
-#### Virtual enviroments
+**Virtual enviroments instructions:**
 - Create a virtual enviroment: `virtualenv <PATH>`
 - Start virtual enviroment: `source bin/activate`
 - Deavtivate the virtual enviroment: `deactivate`
@@ -13,13 +13,14 @@ If error when running the setup sh file
 ### Homebrew 
 Install homebrew: https://brew.sh/
 
-#### Homebrew Packages
-- `brew install wget`
-- `brew install vlc`
-- `brew install rectangle`
+Some nice packages:
+```
+brew install rectangle
+brew install alfred
+brew install powerlevel10k
+```
 
-## UnRaid
-### Nextcloud Docker
+## Nextcloud Docker
 **Scan all files**
 `docker exec nextcloud sudo -u abc php /config/www/nextcloud/occ files:scan --all 1> /dev/null`
 
