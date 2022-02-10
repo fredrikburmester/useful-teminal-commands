@@ -43,12 +43,17 @@ rbenv local 3.0.2 # set global ruby version
 rbenv rehash
 # Add this line to ~/.zshrc for RBENV
 eval "$(rbenv init -)"
-
+```
 # Restart terminal/vscode
+never user sudo with gem/bundle
+```
 sudo gem update
 sudo gem install rails
 
+To fix any issues after this do: sudo chown -R YOURUSER:staff /Users/YOURUSER/.rbenv
+```
 # Turn off AirPlay Reciever in System settings under Sharing
+``` 
 yarn
 bundle install
 rails db:setup
