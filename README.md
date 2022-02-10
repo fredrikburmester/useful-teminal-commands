@@ -1,18 +1,19 @@
-# Useful Teminal Commands
+# Useful Teminal Commands / computer stuff
 
 ## Mac
-If error when running sh file 
+If error when running the setup sh file 
 `cat new-install.sh | tr -d '\r' > install.sh`
+
 ### Python
 #### Virtual enviroments
 - Create a virtual enviroment: `virtualenv <PATH>`
 - Start virtual enviroment: `source bin/activate`
 - Deavtivate the virtual enviroment: `deactivate`
 
-## Homebrew 
+### Homebrew 
 Install homebrew: https://brew.sh/
 
-### Homebrew Packages
+#### Homebrew Packages
 - `brew install wget`
 - `brew install vlc`
 - `brew install rectangle`
@@ -22,7 +23,7 @@ Install homebrew: https://brew.sh/
 **Scan all files**
 `docker exec nextcloud sudo -u abc php /config/www/nextcloud/occ files:scan --all 1> /dev/null`
 
-## Set up: Ruby on rails (m1)
+## Ruby on rails setup (m1)
 Here's a quick tutorial on how to set up Rails on M1 Mac.
 
 ### Install brew packages
